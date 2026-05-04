@@ -20,7 +20,7 @@ namespace StrandC
 
 
         public Furdo(string sor)
-        { 
+        {
             string[] adatok = sor.Split(';');
             Név = adatok[0];
             Cím = adatok[1];
@@ -40,5 +40,17 @@ namespace StrandC
             return Cím.Split("  ")[1].Split(" ")[0];
         }
 
+
+        static void Main(string[] args)
+        {
+            List<Furdo> List = new List<Furdo>();
+            string[] sorok = File.ReadAllLines("strandadatok.txt").Skip(1).ToArray();
+            foreach (string s in sorok)
+            List.Add(new Furdo(s));
+            {
+                
+            }
+
+        }
     }
 }
