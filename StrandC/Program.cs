@@ -46,11 +46,12 @@ namespace StrandC
             List<Furdo> List = new List<Furdo>();
             string[] sorok = File.ReadAllLines("strandadatok.txt").Skip(1).ToArray();
             foreach (string s in sorok)
-            List.Add(new Furdo(s));
-            {
+            List.Add(new Furdo(s));{
+            
                 
             }
-
+            Console.WriteLine("7.feladat");
+            Console.WriteLine($"Fürdők száma: {List.Count}");
         }
     }
 }
