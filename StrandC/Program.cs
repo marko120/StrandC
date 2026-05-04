@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -73,7 +74,32 @@ namespace StrandC
                 }
                 Console.WriteLine($"9.feladat");
                 Console.WriteLine($"A leghidegebb víz a(z) {min.Név} nevű fürdőben van\r\n");
+
+
+
+                Console.WriteLine($"10.feladat\r\n Kérem, adja meg a fűrdő nevét!");
+                string nev = Console.ReadLine();
+                Furdo valasz = null;
+                foreach (var Item in List)
+                {
+                    if (item.Név == nev)
+                    {
+                        valasz = item;
+                        
+                    }
+                }
+                if (valasz != null)
+                {
+                    Console.WriteLine($"a {valasz.Telepules()} településen van, " +
+                        $"az irányítószám: " +
+                        $"{valasz.IRSZ()}");
+                }
+
+                else Console.WriteLine("Nincs ilyen nevű fürdő!");
+
+                }
+                
             }
         }
     }
-}
+
