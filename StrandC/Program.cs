@@ -52,6 +52,16 @@ namespace StrandC
             }
             Console.WriteLine("7.feladat");
             Console.WriteLine($"Fürdők száma: {List.Count}");
+
+
+
+            int összeg = 0;
+            foreach (var item in List)
+            {
+                összeg += item.Ár;
+            }
+            double átlag = összeg/(double)List.Count;
+            Console.WriteLine($"8.feladat\r\n A fűrdőbelépők átlagos ára: {átlag:F1}\r\n");
         }
     }
 }
