@@ -62,6 +62,18 @@ namespace StrandC
             }
             double átlag = összeg/(double)List.Count;
             Console.WriteLine($"8.feladat\r\n A fűrdőbelépők átlagos ára: {átlag:F1}\r\n");
+
+
+            Furdo min = List[0];
+            foreach (var item in List)
+            {
+                if (item.Vízhőfok < min.Vízhőfok)
+                {
+                    min = item;
+                }
+                Console.WriteLine($"9.feladat");
+                Console.WriteLine($"A leghidegebb víz a(z) {min.Név} nevű fürdőben van\r\n");
+            }
         }
     }
 }
